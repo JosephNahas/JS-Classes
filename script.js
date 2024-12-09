@@ -59,6 +59,7 @@ class Store{
     }
 
     findProductByName(name){
+        // Try to find product in inventory and return it, if not found return null
         const productFound = this.inventory.find((product) => product.name == name);
         if (productFound)
             return productFound;
@@ -66,3 +67,7 @@ class Store{
             return null;
     }
 }
+
+let paperTowel = new ProductProperties('Paper Towel', 12.50, 5);
+let facialTissue = new ProductProperties('Facial Tissue', 11.75, 7);
+let bathroomTissue = new ProductProperties('Bathroom Tissue', 18.25, 8);
