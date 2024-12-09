@@ -78,3 +78,6 @@ let myStore = new Store([milk, tofu, paperTowel, facialTissue, bathroomTissue]);
 
 // before discount
 console.log(`total store Inventory value before discount: ${myStore.getInventoryValue()}`);
+
+// apply discount
+ProductProperties.applyDiscount(myStore.inventory, 0.15);
