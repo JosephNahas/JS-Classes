@@ -31,7 +31,7 @@ class PerishableProductProperties extends ProductProperties{
 
     // Override toString
     toString(){
-        super() + `, Expiration Date: ${this.expirationDate}`;
+        return super.toString() + `, Expiration Date: ${this.expirationDate}`;
     }
 }
 
@@ -73,4 +73,8 @@ let paperTowel = new ProductProperties('Paper Towel', 12.50, 5);
 let facialTissue = new ProductProperties('Facial Tissue', 11.75, 7);
 let bathroomTissue = new ProductProperties('Bathroom Tissue', 18.25, 8);
 
+// Store products in myStore
 let myStore = new Store([milk, tofu, paperTowel, facialTissue, bathroomTissue]);
+
+// before discount
+console.log(`total store Inventory value before discount: ${myStore.getInventoryValue()}`);
