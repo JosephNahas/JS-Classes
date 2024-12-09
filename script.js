@@ -17,5 +17,9 @@ class ProductProperties{
 }
 
 class PerishableProductProperties extends ProductProperties{
-    
+    // Constructor
+    constructor(name, price, quantity, expirationDate){
+        super(name, price, quantity); // Call the parent constructor
+        this.expirationDate = expirationDate; // expiration date of product
+    }
 }
