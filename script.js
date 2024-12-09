@@ -57,4 +57,12 @@ class Store{
         }
         return totalValue;
     }
+
+    findProductByName(name){
+        const productFound = this.inventory.find((product) => product.name == name);
+        if (productFound)
+            return productFound;
+        else
+            return null;
+    }
 }
