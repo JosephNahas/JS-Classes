@@ -16,7 +16,9 @@ class ProductProperties{
     }
 
     static applyDiscount(products, discount){
-        
+        for (const product of products){ // for each product
+            product.price -= (discount * product.price); // reduce product price by the discount percentage of the price
+        }
     }
 }
 
