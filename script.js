@@ -14,6 +14,10 @@ class ProductProperties{
     toString(){ // return a string including the product details
         return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
     }
+
+    static applyDiscount(products, discount){
+        
+    }
 }
 
 class PerishableProductProperties extends ProductProperties{
