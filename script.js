@@ -104,3 +104,5 @@ console.log('looking for tofu ' + myStore.findProductByName('Tofu'));
 let eggs = new ProductProperties('Eggs', 6.50, 2);
 myStore.addProduct(eggs);
 
+// print products after adding eggs
+console.log('Products in the store after adding eggs: ' + myStore.productNames());
