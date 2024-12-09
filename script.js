@@ -68,6 +68,9 @@ class Store{
     }
 }
 
+// 3 more products, 5 total including the previous 2
 let paperTowel = new ProductProperties('Paper Towel', 12.50, 5);
 let facialTissue = new ProductProperties('Facial Tissue', 11.75, 7);
 let bathroomTissue = new ProductProperties('Bathroom Tissue', 18.25, 8);
+
+let myStore = new Store([milk, tofu, paperTowel, facialTissue, bathroomTissue]);
