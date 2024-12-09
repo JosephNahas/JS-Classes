@@ -42,6 +42,11 @@ let tofu = new PerishableProductProperties('Tofu', 4.75, 5, '2025-01-16');
 class Store{
     //constructor
     constructor(inventory){
-        this.inventory = inventory;
+        this.inventory = inventory; // inventory array of products and perishable products
+    }
+
+    // methods
+    addProduct(product){
+        this.inventory.push(product); // add a product to the inventory
     }
 }
