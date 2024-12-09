@@ -40,5 +40,8 @@ let milk = new PerishableProductProperties('Milk', 7.50, 9, '2024-12-26');
 let tofu = new PerishableProductProperties('Tofu', 4.75, 5, '2025-01-16');
 
 class Store{
-    
+    //constructor
+    constructor(inventory){
+        this.inventory = inventory;
+    }
 }
