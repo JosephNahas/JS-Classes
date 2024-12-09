@@ -12,7 +12,7 @@ class ProductProperties{
     }
 
     toString(){ // return a string including the product details
-        return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
+        return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
     }
 
     static applyDiscount(products, discount){
@@ -62,9 +62,18 @@ class Store{
         // Try to find product in inventory and return it, if not found return null
         const productFound = this.inventory.find((product) => product.name == name);
         if (productFound)
-            return productFound;
+            return productFound.toString();
         else
             return null;
+    }
+
+    // return all the store products by name
+    productNames(){
+        let productNames = '';
+        for (const product of this.inventory){
+            productNames += `${product.name}, `;
+        }
+        return productNames;
     }
 }
 
@@ -76,6 +85,9 @@ let bathroomTissue = new ProductProperties('Bathroom Tissue', 18.25, 8);
 // Store products in myStore
 let myStore = new Store([milk, tofu, paperTowel, facialTissue, bathroomTissue]);
 
+// print products by name
+console.log('Products in the store: ' + myStore.productNames());
+
 // before discount
 console.log(`total store Inventory value before discount: ${myStore.getInventoryValue()}`);
 
@@ -84,3 +96,11 @@ ProductProperties.applyDiscount(myStore.inventory, 0.15);
 
 // after discount
 console.log(`total store Inventory value after discount: ${myStore.getInventoryValue().toFixed(2)}`);
+
+// find tofu in the store
+console.log('looking for tofu ' + myStore.findProductByName('Tofu'));
+
+// add eggs to the store
+let eggs = new ProductProperties('Eggs', 6.50, 2);
+myStore.addProduct(eggs);
+
