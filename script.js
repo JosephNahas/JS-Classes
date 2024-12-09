@@ -12,7 +12,7 @@ class ProductProperties{
     }
 
     toString(){ // return a string including the product details
-        return `Product: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}.`;
+        return `Product: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}`;
     }
 }
 
@@ -21,5 +21,10 @@ class PerishableProductProperties extends ProductProperties{
     constructor(name, price, quantity, expirationDate){
         super(name, price, quantity); // Call the parent constructor
         this.expirationDate = expirationDate; // expiration date of product
+    }
+
+    // Override toString
+    toString(){
+        super() + `, Expiration Date: ${this.expirationDate}`;
     }
 }
