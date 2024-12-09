@@ -15,3 +15,7 @@ class ProductProperties{
         return `Product: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}.`;
     }
 }
+
+class PerishableProductProperties extends ProductProperties{
+    
+}
